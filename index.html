@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d111c" />
+    <meta name="description" content="A clean, responsive calculator for everyday math." />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Simple Calculator home">
+          <span class="brand-mark" aria-hidden="true">÷</span>
+          <span>simple<span class="brand-light">calc</span></span>
+        </a>
+        <span class="topbar-label">EVERYDAY MATH, MADE EASY</span>
+      </header>
+
+      <section class="calculator" aria-label="Calculator">
+        <div class="calculator-heading">
+          <div>
+            <p class="eyebrow">YOUR POCKET TOOL</p>
+            <h1>Calculator</h1>
+          </div>
+          <span class="status-dot" aria-label="Ready"></span>
+        </div>
+
+        <div class="display" aria-live="polite" aria-atomic="true">
+          <div class="expression" id="expression" aria-label="Expression"></div>
+          <output class="result" id="result" aria-label="Display" role="status">0</output>
+        </div>
+
+        <div class="keypad" aria-label="Calculator keys">
+          <button class="key key-function" type="button" data-action="clear" aria-label="Clear all">AC</button>
+          <button class="key key-function" type="button" data-action="sign" aria-label="Change sign">+/−</button>
+          <button class="key key-function" type="button" data-action="percent" aria-label="Percent">%</button>
+          <button class="key key-operator" type="button" data-operator="÷" aria-label="Divide">÷</button>
+
+          <button class="key" type="button" data-number="7">7</button>
+          <button class="key" type="button" data-number="8">8</button>
+          <button class="key" type="button" data-number="9">9</button>
+          <button class="key key-operator" type="button" data-operator="×" aria-label="Multiply">×</button>
+
+          <button class="key" type="button" data-number="4">4</button>
+          <button class="key" type="button" data-number="5">5</button>
+          <button class="key" type="button" data-number="6">6</button>
+          <button class="key key-operator" type="button" data-operator="−" aria-label="Subtract">−</button>
+
+          <button class="key" type="button" data-number="1">1</button>
+          <button class="key" type="button" data-number="2">2</button>
+          <button class="key" type="button" data-number="3">3</button>
+          <button class="key key-operator" type="button" data-operator="+" aria-label="Add">+</button>
+
+          <button class="key key-function key-delete" type="button" data-action="delete" aria-label="Delete last digit">⌫</button>
+          <button class="key" type="button" data-number="0">0</button>
+          <button class="key" type="button" data-action="decimal" aria-label="Decimal point">.</button>
+          <button class="key key-equals" type="button" data-action="equals" aria-label="Equals">=</button>
+        </div>
+        <p class="keyboard-hint">Tip: use your keyboard to calculate <kbd>Enter</kbd> to solve</p>
+      </section>
+
+      <footer class="footer">A little clarity for your numbers <span aria-hidden="true">✦</span></footer>
+    </main>
+  </body>
+</html>
